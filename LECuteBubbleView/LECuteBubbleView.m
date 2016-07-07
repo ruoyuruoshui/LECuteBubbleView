@@ -152,7 +152,6 @@
 - (void)relayoutedSubviews
 {
     CGFloat minSize = MIN(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
-    CGFloat maxSize = MAX(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
     
     self.frontView.layer.cornerRadius = minSize / 2.0f;
     self.frontView.layer.masksToBounds = YES;
@@ -169,7 +168,7 @@
     m_x2 = self.frontView.center.x;
     m_y2 = self.frontView.center.y;
     
-    m_r2 = maxSize / 2.0f;
+    m_r2 = minSize / 2.0f;
     m_r1 = CGRectGetWidth(m_backView.bounds) / 2.0f;
 }
 
@@ -239,8 +238,9 @@
             if (m_r1 <= 6) {
                 m_backView.hidden = YES;
                 [m_shapeLayer removeFromSuperlayer];
+            } else {
+                [self drawRect];
             }
-            [self drawRect];
         }
             break;
         case UIGestureRecognizerStateEnded:

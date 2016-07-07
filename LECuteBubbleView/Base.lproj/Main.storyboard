@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nK7-aM-5M3" customClass="LECuteBubbleView">
-                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <rect key="frame" x="282.5" y="290" width="35" height="20"/>
                                 <color key="backgroundColor" red="0.55396945139999998" green="1" blue="0.80305772119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="KwU-wx-Cli"/>
-                                    <constraint firstAttribute="width" constant="30" id="UOb-BA-vxh"/>
+                                    <constraint firstAttribute="height" constant="20" id="KwU-wx-Cli"/>
+                                    <constraint firstAttribute="width" constant="35" id="UOb-BA-vxh"/>
                                 </constraints>
                             </view>
                         </subviews>
